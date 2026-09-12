@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project - Styled Profile</title>
+  <link rel="stylesheet" href="mini-project-styled_profile.css">
+</head>
+<body>
+  <header class="profile-header">
+    <img
+      class="profile-photo"
+      src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Crect width='160' height='160' fill='%23415a77'/%3E%3Ccircle cx='80' cy='62' r='34' fill='%23e0e1dd'/%3E%3Cellipse cx='80' cy='150' rx='58' ry='42' fill='%23e0e1dd'/%3E%3C/svg%3E"
+      alt="Portrait illustration of the profile owner"
+    >
+    <h1 class="profile-name">Amara Chukwu</h1>
+    <p class="profile-title">Front-End Developer &middot; Trail Runner &middot; Amateur Baker</p>
+
+    <nav class="profile-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="profile-main">
+    <section id="about" class="profile-section">
+      <h2>About Me</h2>
+      <p>
+        I'm a front-end developer who spends most weekdays turning designs
+        into real, working pages, and most weekends on a trail somewhere
+        with too much water and not enough snacks. I care a lot about
+        writing CSS that other people can actually read six months later.
+      </p>
+    </section>
+
+    <section id="skills" class="profile-section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Semantic HTML5</li>
+        <li>CSS (selectors, cascade, box model, layout)</li>
+        <li>Accessible, readable markup</li>
+        <li>JavaScript fundamentals</li>
+        <li>Git &amp; version control basics</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="profile-section">
+      <h2>Projects</h2>
+
+      <article class="project-card">
+        <h3>Trail Notes Blog</h3>
+        <p>
+          A small personal blog styled entirely with hand-written CSS,
+          no frameworks, focused on readable typography and calm spacing.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Recipe Box</h3>
+        <p>
+          A simple recipe collection page with a clear visual hierarchy
+          between recipe titles, ingredient lists, and step-by-step
+          instructions.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>CSS Foundations Exercises</h3>
+        <p>
+          The very exercises in this module: selectors, specificity, the
+          box model, and typography, all practiced from scratch.
+        </p>
+      </article>
+    </section>
+
+    <section id="contact" class="profile-section contact-section">
+      <h2>Get In Touch</h2>
+      <p>Feel free to reach out through any of the links below.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:amara@example.com">amara@example.com</a></li>
+        <li><a href="https://github.com/example">github.com/example</a></li>
+        <li><a href="https://linkedin.com/in/example">linkedin.com/in/example</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="profile-footer">
+    <p>&copy; 2026 Amara Chukwu. Styled with plain CSS, no frameworks.</p>
+  </footer>
+</body>
+</html>

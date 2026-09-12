@@ -1,0 +1,146 @@
+/* ==========================================================================
+   3-typography_colors.css
+   Demonstrates: font-family, font-size/weight, line-height, text-align,
+   color, background-color, and different color notations.
+   ========================================================================== */
+
+body {
+  /* rem is relative to the root font-size (default 16px), so this scales
+     predictably if a user changes their browser's base font size */
+  font-size: 1rem;
+  background-color: #ffffff;
+  margin: 24px;
+}
+
+.post {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #212121;
+  line-height: 1.7; /* generous line-height improves long-form readability */
+  max-width: 700px;
+}
+
+/* Headings use a different, sans-serif font family to contrast with body text */
+h1, h2 {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #1a237e;
+  line-height: 1.25; /* tighter line-height suits short heading text */
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 32px;
+  border-bottom: 1px solid #c5cae9;
+  padding-bottom: 4px;
+}
+
+.byline {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #757575;
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------
+   Font weights
+   -------------------------------------------------------------------- */
+.light {
+  font-weight: 300;
+}
+
+.normal-weight {
+  font-weight: 400;
+}
+
+.bold-weight {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------
+   Font sizes (using em relative to the paragraph's own context)
+   -------------------------------------------------------------------- */
+.size-small {
+  font-size: 0.8rem;
+}
+
+.size-base {
+  font-size: 1rem;
+}
+
+.size-large {
+  font-size: 1.3rem;
+}
+
+.size-xlarge {
+  font-size: 1.8em; /* em relative to this element's inherited font-size */
+  font-weight: 600;
+  color: #283593;
+}
+
+/* --------------------------------------------------------------------
+   Color methods: named color, hex, and rgb()
+   -------------------------------------------------------------------- */
+.color-named {
+  color: darkslategray; /* named color */
+  background-color: #f1f8e9;
+  padding: 8px 12px;
+}
+
+.color-hex {
+  color: #006064; /* hex color */
+  background-color: #e0f7fa;
+  padding: 8px 12px;
+}
+
+.color-rgb {
+  color: rgb(120, 53, 15); /* rgb() color */
+  background-color: rgb(255, 236, 210);
+  padding: 8px 12px;
+}
+
+/* --------------------------------------------------------------------
+   Text alignment
+   -------------------------------------------------------------------- */
+.align-left {
+  text-align: left;
+  background-color: #fafafa;
+  padding: 8px 12px;
+}
+
+.align-center {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 8px 12px;
+}
+
+.align-right {
+  text-align: right;
+  background-color: #fafafa;
+  padding: 8px 12px;
+}
+
+/* --------------------------------------------------------------------
+   Pull quote
+   -------------------------------------------------------------------- */
+.pull-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #4e342e;
+  background-color: #efebe9;
+  border-left: 5px solid #8d6e63;
+  padding: 12px 20px;
+  margin: 24px 0;
+}
+
+code {
+  font-family: "Consolas", "Courier New", monospace;
+  background-color: #eeeeee;
+  padding: 2px 5px;
+  color: #c62828;
+}

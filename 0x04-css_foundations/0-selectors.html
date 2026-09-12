@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0 - CSS Selectors</title>
+  <link rel="stylesheet" href="0-selectors.css">
+</head>
+<body>
+  <h1>CSS Selectors Playground</h1>
+  <p>This page demonstrates several kinds of CSS selectors: element, class, ID, attribute, pseudo-class, and combinators.</p>
+
+  <section class="demo-section">
+    <h2>Element Selector</h2>
+    <p>Every paragraph on this page picks up a base style from the plain <code>p</code> element selector, with no class or ID needed.</p>
+    <p>This is a second, unrelated paragraph, styled the exact same way.</p>
+  </section>
+
+  <section class="demo-section">
+    <h2>Class Selector</h2>
+    <p class="highlight">This paragraph has the <code>.highlight</code> class, which gives it a yellow background and bold text.</p>
+    <p class="highlight">This paragraph also uses <code>.highlight</code>, because classes are reusable across many elements.</p>
+    <p>This paragraph has no class, so it keeps the plain element style only.</p>
+  </section>
+
+  <section class="demo-section">
+    <h2>ID Selector</h2>
+    <p id="intro-note">This paragraph has a unique <code>#intro-note</code> ID. IDs must be unique per page, so this style can only ever apply to this one element.</p>
+  </section>
+
+  <section class="demo-section">
+    <h2>Attribute Selector</h2>
+    <p>Below are links with different <code>href</code> attribute patterns. External links are styled differently using an attribute selector.</p>
+    <ul class="link-list">
+      <li><a href="https://developer.mozilla.org">External link to MDN</a></li>
+      <li><a href="#intro-note">Internal link (jump to ID note)</a></li>
+    </ul>
+    <p>
+      <input type="text" placeholder="Regular text input">
+      <input type="text" disabled placeholder="Disabled input" value="Can't edit me">
+    </p>
+  </section>
+
+  <section class="demo-section">
+    <h2>Pseudo-classes</h2>
+    <p>Hover over the button below to see a <code>:hover</code> state change.</p>
+    <button class="action-btn">Hover Over Me</button>
+
+    <p>The list below uses <code>:first-child</code> and <code>:last-child</code> to style the first and last items differently from the rest.</p>
+    <ul class="feature-list">
+      <li>First feature (styled via :first-child)</li>
+      <li>Second feature</li>
+      <li>Third feature</li>
+      <li>Fourth feature</li>
+      <li>Last feature (styled via :last-child)</li>
+    </ul>
+  </section>
+
+  <section class="demo-section">
+    <h2>Descendant and Child Combinators</h2>
+    <div class="card">
+      <h3>Card Title</h3>
+      <p>This paragraph is a descendant of <code>.card</code>, so the descendant combinator <code>.card p</code> styles it with italic text.</p>
+      <div class="card-footer">
+        <p>This paragraph is nested two levels deep inside <code>.card-footer</code> inside <code>.card</code>. The descendant combinator still reaches it, but the child combinator <code>.card &gt; p</code> would NOT, since it isn't a direct child of <code>.card</code>.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

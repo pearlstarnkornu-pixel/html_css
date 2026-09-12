@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1 - CSS Specificity</title>
+  <link rel="stylesheet" href="1-specificity.css">
+</head>
+<body>
+  <h1>Specificity &amp; the Cascade</h1>
+  <p>Every example below is a paragraph or heading that has MULTIPLE conflicting rules written against it. Read the CSS file comments to see which rule wins and why.</p>
+
+  <section class="demo">
+    <h2>1. Element vs Class</h2>
+    <!--
+      Conflict: the element selector "p" (specificity 0-0-1) vs
+      the class selector ".element-vs-class" (specificity 0-1-0).
+      A class always beats a plain element selector, regardless of order.
+    -->
+    <p class="element-vs-class">This text should be GREEN, because the class selector (0-1-0) beats the element selector (0-0-1), even though the element rule is written after the class rule in the stylesheet.</p>
+  </section>
+
+  <section class="demo">
+    <h2>2. Class vs ID</h2>
+    <!--
+      Conflict: ".class-vs-id" (specificity 0-1-0) vs
+      "#class-vs-id" (specificity 1-0-0).
+      An ID always beats a class, no matter how many classes are combined
+      (short of piling up many classes, which is rare in practice).
+    -->
+    <p class="class-vs-id" id="class-vs-id">This text should be PURPLE, because the ID selector (1-0-0) beats the class selector (0-1-0).</p>
+  </section>
+
+  <section class="demo">
+    <h2>3. Multiple Classes vs Single Class</h2>
+    <!--
+      Conflict: ".badge" (0-1-0) vs ".badge.urgent" (0-2-0).
+      Two classes combined on the same selector out-specify one class alone.
+    -->
+    <p class="badge urgent">This text should be ORANGE with a bold border, because ".badge.urgent" (0-2-0) is more specific than ".badge" (0-1-0) alone.</p>
+  </section>
+
+  <section class="demo">
+    <h2>4. Source Order (Equal Specificity)</h2>
+    <!--
+      Conflict: two rules both target ".tie-breaker" with equal specificity
+      (0-1-0). When specificity is EQUAL, the rule that appears LAST in the
+      stylesheet wins. See 1-specificity.css: the second ".tie-breaker" rule
+      overrides the first.
+    -->
+    <p class="tie-breaker">This text should be TEAL (the second, later rule), because when specificity ties, the last declaration in the CSS wins.</p>
+  </section>
+
+  <section class="demo">
+    <h2>5. Inline Style vs ID</h2>
+    <!--
+      Conflict: an inline style="" attribute (specificity 1-0-0-0, higher
+      than any selector) vs an ID selector (1-0-0). Inline styles almost
+      always win over stylesheet rules, which is exactly why this module
+      teaches you to avoid inline styles for real styling work -- they are
+      very hard to override later.
+    -->
+    <p id="inline-fight" style="color: black;">This text should be BLACK from the inline style attribute, even though #inline-fight below sets the color to red in the external stylesheet. Inline styles outrank ID selectors.</p>
+  </section>
+
+  <section class="demo">
+    <h2>6. !important Overrides Everything (Use Sparingly)</h2>
+    <!--
+      Conflict: "#important-demo" (1-0-0) normally beats ".override" (0-1-0),
+      but ".override" uses "!important", which forces it to win regardless
+      of specificity. !important should be used rarely, since it breaks the
+      normal cascade and makes future overrides harder.
+    -->
+    <p class="override" id="important-demo">This text should be MAROON because of `!important` on the class rule, overriding the normally-stronger ID rule.</p>
+  </section>
+</body>
+</html>

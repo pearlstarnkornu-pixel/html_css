@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 - The Box Model</title>
+  <link rel="stylesheet" href="2-box_model.css">
+</head>
+<body>
+  <h1>The CSS Box Model</h1>
+  <p class="intro">Every box below uses background colors and outlines to visualize its content, padding, and border layers separately, plus a margin gap between boxes.</p>
+
+  <h2>Box 1: content-box (the default)</h2>
+  <div class="box content-box-demo">
+    content-box: width is content ONLY. Padding and border are added on top of the declared width, making the final rendered box larger than 220px.
+  </div>
+
+  <div class="box content-box-demo">
+    Second content-box example, same rules, showing the margin gap above separates the two boxes.
+  </div>
+
+  <h2>Box 2: border-box</h2>
+  <div class="box border-box-demo">
+    border-box: width INCLUDES padding and border. This box is exactly 220px wide no matter how much padding or border it has, which makes layout math much easier.
+  </div>
+
+  <div class="box border-box-demo">
+    Second border-box example. Notice both border-box boxes are the same total width, even though their padding differs (see CSS comments).
+  </div>
+
+  <h2>Box 3: Card-style comparison</h2>
+  <div class="card-row">
+    <div class="mini-card small-padding">
+      <h3>Small Padding Card</h3>
+      <p>Less padding, so text sits closer to the border.</p>
+    </div>
+    <div class="mini-card large-padding">
+      <h3>Large Padding Card</h3>
+      <p>More padding, so text has generous breathing room from the border.</p>
+    </div>
+  </div>
+
+  <h2>Box 4: Margin Collapsing Demo</h2>
+  <p class="explainer">The two paragraphs below both have vertical margin. Adjacent vertical margins between block elements can "collapse" into a single margin (the larger of the two), which is a common box model surprise.</p>
+  <p class="margin-demo-a">Paragraph A has margin-bottom: 30px.</p>
+  <p class="margin-demo-b">Paragraph B has margin-top: 20px. The visible gap above is 30px (the larger value), not 50px (the sum), because of margin collapsing.</p>
+</body>
+</html>

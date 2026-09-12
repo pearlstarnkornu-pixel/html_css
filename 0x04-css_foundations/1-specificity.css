@@ -1,0 +1,117 @@
+/* ==========================================================================
+   1-specificity.css
+   Every rule block below is commented with its specificity value in the
+   format (inline, IDs, classes/attrs/pseudo-classes, elements/pseudo-elems)
+   so you can see exactly why a given rule wins a conflict.
+   ========================================================================== */
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 24px;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+}
+
+.demo {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------
+   1. Element vs Class
+   -------------------------------------------------------------------- */
+
+/* Specificity: 0-0-1 (one element selector) */
+p {
+  color: black;
+}
+
+/* Specificity: 0-1-0 (one class selector) -- WINS over the "p" rule above,
+   because a class always outranks a plain element selector. */
+.element-vs-class {
+  color: green;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+   2. Class vs ID
+   -------------------------------------------------------------------- */
+
+/* Specificity: 0-1-0 */
+.class-vs-id {
+  color: blue;
+}
+
+/* Specificity: 1-0-0 -- WINS over ".class-vs-id", because an ID selector
+   is always stronger than a class selector. */
+#class-vs-id {
+  color: purple;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+   3. Multiple Classes vs Single Class
+   -------------------------------------------------------------------- */
+
+/* Specificity: 0-1-0 */
+.badge {
+  color: gray;
+  border: 1px solid gray;
+  padding: 4px 8px;
+}
+
+/* Specificity: 0-2-0 (two classes chained on the same selector) -- WINS
+   over ".badge" alone. */
+.badge.urgent {
+  color: orangered;
+  border: 2px solid orangered;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+   4. Source Order (Equal Specificity)
+   -------------------------------------------------------------------- */
+
+/* Specificity: 0-1-0 (first declaration) */
+.tie-breaker {
+  color: crimson;
+}
+
+/* Specificity: 0-1-0 (identical specificity, declared SECOND) -- WINS
+   because when specificity is tied, the last rule in source order wins. */
+.tie-breaker {
+  color: teal;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+   5. Inline Style vs ID
+   -------------------------------------------------------------------- */
+
+/* Specificity: 1-0-0 -- would normally be very strong, but the HTML
+   element also carries style="color: black;" directly on the tag.
+   Inline styles have a higher "weight" than any selector in a
+   stylesheet, so the inline style wins here. */
+#inline-fight {
+  color: red;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+   6. !important Overrides Everything
+   -------------------------------------------------------------------- */
+
+/* Specificity: 1-0-0 -- normally stronger than a class selector */
+#important-demo {
+  color: navy;
+}
+
+/* Specificity: 0-1-0, but marked !important -- WINS over the ID rule
+   above because !important short-circuits the normal specificity
+   comparison. Use this escape hatch sparingly; it makes future
+   overrides much harder to reason about. */
+.override {
+  color: maroon !important;
+  font-weight: bold;
+}

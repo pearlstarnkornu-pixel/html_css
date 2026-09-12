@@ -1,0 +1,145 @@
+/* ==========================================================================
+   0-selectors.css
+   Demonstrates: element selectors, class selectors, ID selectors,
+   attribute selectors, pseudo-classes, and combinators.
+   ========================================================================== */
+
+/* --- Base page styling (element selectors) --- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: #fafafa;
+  margin: 24px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #1a3c6e;
+}
+
+h2 {
+  color: #2c5282;
+  border-bottom: 2px solid #cbd5e0;
+  padding-bottom: 4px;
+}
+
+/* Element selector: every <p> gets this base look */
+p {
+  background-color: #eef2f7;
+  padding: 8px 10px;
+  border-left: 4px solid #90a4ae;
+  margin: 10px 0;
+}
+
+section.demo-section {
+  margin-bottom: 32px;
+  padding: 12px 16px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+}
+
+/* --- Class selector --- */
+/* Reusable: any element can carry .highlight */
+.highlight {
+  background-color: #fff59d;
+  font-weight: bold;
+  border-left-color: #f9a825;
+}
+
+/* --- ID selector --- */
+/* Unique: only one element on the page can be #intro-note */
+#intro-note {
+  background-color: #d1f2eb;
+  border-left-color: #16a085;
+  font-style: italic;
+}
+
+/* --- Attribute selectors --- */
+/* Targets <a> elements whose href starts with "https" (external links) */
+a[href^="https"] {
+  color: #b71c1c;
+  font-weight: bold;
+  text-decoration: underline wavy;
+}
+
+/* Targets internal anchor links (href starting with #) */
+a[href^="#"] {
+  color: #1565c0;
+  text-decoration: none;
+  border-bottom: 1px dashed #1565c0;
+}
+
+/* Targets disabled inputs specifically */
+input[disabled] {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.link-list {
+  list-style: square inside;
+}
+
+/* --- Pseudo-classes --- */
+.action-btn {
+  padding: 10px 18px;
+  border: 2px solid #2c5282;
+  background-color: #ffffff;
+  color: #2c5282;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* :hover pseudo-class changes appearance on mouse-over */
+.action-btn:hover {
+  background-color: #2c5282;
+  color: #ffffff;
+}
+
+.feature-list {
+  padding-left: 20px;
+}
+
+.feature-list li {
+  background-color: #f0f0f0;
+  padding: 6px 8px;
+  margin: 4px 0;
+}
+
+/* :first-child pseudo-class targets only the first <li> in the list */
+.feature-list li:first-child {
+  background-color: #c8e6c9;
+  font-weight: bold;
+}
+
+/* :last-child pseudo-class targets only the last <li> in the list */
+.feature-list li:last-child {
+  background-color: #ffcdd2;
+  font-weight: bold;
+}
+
+/* --- Combinators --- */
+.card {
+  border: 1px solid #b0bec5;
+  padding: 12px;
+  background-color: #f5f5f5;
+}
+
+/* Descendant combinator (space): matches any <p> anywhere inside .card,
+   no matter how deeply nested */
+.card p {
+  font-style: italic;
+  color: #37474f;
+}
+
+/* Child combinator (>): matches only <h3> that is a DIRECT child of .card */
+.card > h3 {
+  color: #4527a0;
+  margin-top: 0;
+}
+
+.card-footer {
+  border-top: 1px dashed #90a4ae;
+  margin-top: 10px;
+  padding-top: 8px;
+}

@@ -1,0 +1,208 @@
+/* ==========================================================================
+   mini-project-styled_profile.css
+   A fully styled personal profile page using only selectors, the cascade,
+   the box model, units, typography, and color -- no Flexbox, no Grid.
+   Layout relies on normal block flow, inline-block navigation links, and
+   box-model spacing (margin/padding/borders) throughout.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------
+   Color palette & shared variables (optional challenge: CSS custom
+   properties keep the whole page's palette consistent and easy to tune)
+   -------------------------------------------------------------------- */
+:root {
+  --color-primary: #1b263b;
+  --color-primary-light: #415a77;
+  --color-accent: #e0e1dd;
+  --color-bg: #f7f7f5;
+  --color-card-bg: #ffffff;
+  --color-text: #22223b;
+  --color-muted: #6c757d;
+  --radius-base: 8px;
+  --spacing-unit: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------- */
+.profile-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px 24px 20px;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* profile image styled: circular avatar */
+  border: 4px solid var(--color-accent);
+  background-color: var(--color-primary-light);
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 16px 0 4px 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-title {
+  margin: 0 0 20px 0;
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Navigation: inline-block links in normal flow (no flexbox/grid) */
+.profile-nav {
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-nav a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 4px 6px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-base);
+}
+
+/* Hover effect on navigation links */
+.profile-nav a:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-primary-light);
+}
+
+/* --------------------------------------------------------------------
+   Main content
+   -------------------------------------------------------------------- */
+.profile-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.profile-section {
+  background-color: var(--color-card-bg);
+  border: 1px solid #e2e2e2;
+  border-radius: var(--radius-base);
+  padding: 28px 32px;
+  margin-top: 32px;
+}
+
+.profile-section h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.profile-section p {
+  margin: 0 0 12px 0;
+  color: var(--color-text);
+}
+
+.profile-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------
+   Skills list
+   -------------------------------------------------------------------- */
+.skills-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.skills-list li {
+  padding: 4px 0;
+}
+
+/* First skill highlighted with a pseudo-class, small visual detail */
+.skills-list li:first-child {
+  font-weight: bold;
+  color: var(--color-primary-light);
+}
+
+/* --------------------------------------------------------------------
+   Project cards (optional challenge: card-style section)
+   -------------------------------------------------------------------- */
+.project-card {
+  background-color: var(--color-bg);
+  border-left: 5px solid var(--color-primary-light);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.project-card:last-child {
+  margin-bottom: 0;
+}
+
+.project-card h3 {
+  margin: 0 0 8px 0;
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* --------------------------------------------------------------------
+   Contact section
+   -------------------------------------------------------------------- */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------- */
+.profile-footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  padding: 28px 20px 40px 20px;
+}
