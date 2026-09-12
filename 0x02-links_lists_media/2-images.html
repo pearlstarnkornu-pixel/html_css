@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Practice - Paths, Alt Text &amp; Dimensions</title>
+</head>
+<body>
+    <header>
+        <h1>Working With Images</h1>
+        <p>This page demonstrates images loaded from a relative path and images loaded from an absolute URL, each with meaningful alt text and explicit dimensions.</p>
+    </header>
+
+    <main>
+        <section id="relative-image">
+            <h2>Image With a Relative Path</h2>
+            <p>
+                This image is referenced with a relative path, meaning the browser looks for it inside a folder
+                next to this HTML file. Relative paths are ideal for images that belong to your own project,
+                because the link keeps working no matter which domain or folder the whole project is moved to.
+            </p>
+            <img src="images/study-desk.jpg" alt="A tidy study desk with an open notebook, a laptop, and a cup of coffee" width="480" height="320">
+            <p><small>File path used: <code>images/study-desk.jpg</code> (relative to this page). This local image file is not actually included in this exercise, so the browser will show the alt text or a broken-image icon instead of the picture — that is expected here.</small></p>
+        </section>
+
+        <section id="absolute-image">
+            <h2>Image With an Absolute URL</h2>
+            <p>
+                This image is referenced with an absolute URL, a full web address that points to a file hosted on
+                a different server entirely. Absolute URLs are necessary when embedding images you do not host
+                yourself, such as pulling a photo from a placeholder image service.
+            </p>
+            <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=480&amp;h=320&amp;fit=crop" alt="A wooden boathouse and dock with several rowboats moored on a calm alpine lake, framed by dramatic rocky peaks" width="480" height="320">
+            <p><small>File path used: <code>https://images.unsplash.com/photo-1470770903676-69b98201ea1c</code> (absolute URL to an external server).</small></p>
+        </section>
+
+        <section id="path-discussion">
+            <h2>Relative vs. Absolute Paths</h2>
+            <p>
+                A <strong>relative path</strong> describes the location of a file in relation to the current page,
+                such as <code>images/study-desk.jpg</code> or <code>../assets/logo.png</code>. Relative paths are
+                shorter, and they automatically keep working if the whole website is moved to a new domain, since
+                they never mention a specific host.
+            </p>
+            <p>
+                An <strong>absolute path</strong>, on the other hand, is a complete URL including the protocol and
+                domain, such as <code>https://images.unsplash.com/photo-1470770903676-69b98201ea1c</code>. Absolute paths are required whenever the
+                resource lives on a different server than the page referencing it, but they will break if that
+                external server ever changes its URL structure or goes offline.
+            </p>
+            <p>
+                As a rule of thumb: use relative paths for files that belong to your own project (your own images,
+                stylesheets, and scripts), and use absolute paths only for resources hosted elsewhere.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Every image above includes descriptive alt text, and explicit width/height attributes to prevent layout shift while the image loads.</p>
+    </footer>
+</body>
+</html>

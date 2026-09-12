@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Practice - Internal, External &amp; Email Links</title>
+</head>
+<body>
+    <header>
+        <h1>Understanding HTML Links</h1>
+        <p>This page demonstrates internal links, external links, and email links, all wrapped in meaningful content instead of a bare list of URLs.</p>
+    </header>
+
+    <nav>
+        <p>Jump to a section:
+            <a href="#external-resources">External Resources</a> |
+            <a href="#internal-sections">Page Sections</a> |
+            <a href="#contact">Contact</a>
+        </p>
+    </nav>
+
+    <main>
+        <section id="external-resources">
+            <h2>External Resources</h2>
+            <p>
+                When researching HTML, one of the most reliable references is the
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs HTML reference</a>,
+                which documents every element and attribute in detail. For checking whether a page's markup is valid,
+                the <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Markup Validation Service</a> is
+                a useful free tool that catches structural mistakes before they cause rendering issues.
+            </p>
+            <p>
+                Both of these links open in a new browser tab so readers do not lose their place on this page.
+                The <code>rel="noopener noreferrer"</code> attribute is included for security: it prevents the
+                newly opened page from gaining access to this page's <code>window</code> object and stops it
+                from seeing which page referred it.
+            </p>
+        </section>
+
+        <section id="internal-sections">
+            <h2>Internal Page Sections</h2>
+            <p>
+                Internal links point to an element elsewhere on the same page using that element's <code>id</code>
+                attribute. For example, the <a href="#lists-explanation">explanation of list types</a> below is
+                reached without ever leaving this document, and the browser simply scrolls the matching section
+                into view.
+            </p>
+
+            <article id="lists-explanation">
+                <h3>Why Internal Links Matter</h3>
+                <p>
+                    Long documents, such as terms of service pages or in-depth articles, often use internal links
+                    at the top to build a mini table of contents. This lets a reader skip straight to the part they
+                    care about instead of scrolling through unrelated content first.
+                </p>
+                <p>
+                    Back to the <a href="#external-resources">external resources section</a> if you want to revisit
+                    those links.
+                </p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Getting in Touch</h2>
+            <p>
+                Questions about this lesson can be sent directly by email using
+                <a href="mailto:study.notes@example.com">study.notes@example.com</a>. Clicking that link opens
+                the visitor's default email application with the address already filled into the "To" field,
+                which is far more convenient than asking a reader to copy and paste an address by hand.
+            </p>
+            <p>
+                A <code>mailto:</code> link can also pre-fill a subject line, like this
+                <a href="mailto:study.notes@example.com?subject=Question%20about%20HTML%20links">message with a subject about HTML links already added</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>End of the links practice page. Use the navigation above to jump back to any section.</p>
+    </footer>
+</body>
+</html>
