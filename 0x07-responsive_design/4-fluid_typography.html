@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fluid Typography</title>
+  <link rel="stylesheet" href="4-fluid_typography.css">
+</head>
+<body>
+  <article class="reading-column">
+    <h1>Reading at Any Width</h1>
+    <p class="lede">
+      Every heading and paragraph on this page is sized with
+      <code>clamp()</code>, so the type scales smoothly as the viewport
+      grows instead of jumping abruptly at a fixed breakpoint.
+    </p>
+
+    <h2>Why Not Just Use Pixels?</h2>
+    <p>
+      A fixed pixel size looks fine at the width you designed it for, but it
+      does not adapt. Text that is comfortable on a phone often looks tiny
+      stretched across a wide monitor, and text sized for a desktop can
+      overwhelm a small screen. Relative units solve this by tying size to
+      something that already changes with the viewport.
+    </p>
+
+    <h2>How clamp() Helps</h2>
+    <p>
+      <code>clamp(minimum, preferred, maximum)</code> lets a value grow with
+      the viewport width (the preferred value, usually in <code>vw</code>)
+      while never shrinking below the minimum or exceeding the maximum. The
+      result is type that feels hand-tuned at every width instead of only a
+      couple of fixed breakpoints.
+    </p>
+
+    <h2>Keeping Line Length Readable</h2>
+    <p>
+      This paragraph sits inside a column capped with a <code>ch</code>-based
+      <code>max-width</code>, so even on an ultra-wide monitor the line
+      length stays around 70 characters, which is close to the sweet spot
+      for comfortable reading.
+    </p>
+
+    <blockquote>
+      "Typography exists to honor content." &mdash; Robert Bringhurst
+    </blockquote>
+
+    <p>
+      Try resizing this browser window from a narrow phone width up to a
+      large desktop width. The headings, body text, and spacing around each
+      element should all scale gradually rather than snapping between fixed
+      sizes.
+    </p>
+  </article>
+</body>
+</html>

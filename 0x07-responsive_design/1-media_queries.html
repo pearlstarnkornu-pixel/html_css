@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakpoints in Action</title>
+  <link rel="stylesheet" href="1-media_queries.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Breakpoints in Action</h1>
+    <p>Resize the browser to see each section change at 768px and 1024px.</p>
+  </header>
+
+  <main>
+    <section class="zone zone-mobile">
+      <h2>Zone A</h2>
+      <p class="current-label">Current breakpoint: <strong>Mobile</strong> (below 768px)</p>
+      <p>
+        On a narrow screen this section stacks content in a single column
+        with a warm, compact background so it is obvious you are viewing
+        the base mobile styles.
+      </p>
+    </section>
+
+    <section class="zone zone-tablet">
+      <h2>Zone B</h2>
+      <p class="current-label">Changes at: <strong>768px and up</strong></p>
+      <p>
+        At tablet width this section switches to a two-column layout, gets
+        a different background color, and increases its padding.
+      </p>
+      <p>
+        The text you are reading also grows slightly and the section gains
+        a visible border to mark the change.
+      </p>
+    </section>
+
+    <section class="zone zone-desktop">
+      <h2>Zone C</h2>
+      <p class="current-label">Changes at: <strong>1024px and up</strong></p>
+      <p>
+        At desktop width this section moves to a three-column grid, adopts
+        yet another background color, and spacing opens up even further so
+        the page feels intentional rather than merely "big."
+      </p>
+      <p>Column one of this zone's grid.</p>
+      <p>Column two of this zone's grid.</p>
+      <p>Column three of this zone's grid.</p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>0x07 &middot; Media Queries Exercise</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farflung — Travel Further</title>
+  <link rel="stylesheet" href="mini-project-travel_site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="brand">Farflung</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#plan">Plan a Trip</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Travel Further, Worry Less</h1>
+        <p>
+          Hand-planned itineraries to the world's most rewarding places,
+          built around how you actually like to travel.
+        </p>
+        <a href="#plan" class="button">Start Planning</a>
+      </div>
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1675186883319-fe6958f195b0?w=900&h=700&fit=crop"
+        alt="Traveler standing on a granite cliff ledge overlooking Yosemite Valley"
+      >
+    </section>
+
+    <section id="destinations" class="destinations">
+      <h2>Popular Destinations</h2>
+      <p class="section-intro">A handful of the trips our travelers book most often.</p>
+
+      <div class="card-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1755414718558-90bd77b95cc0?w=500&h=350&fit=crop" alt="Traditional wooden temple gate with a curved tiled roof, framed by green trees">
+          <div class="destination-body">
+            <h3>Kyoto, Japan</h3>
+            <p>Temple gardens, quiet backstreets, and the best seasonal food you'll eat all year.</p>
+            <span class="price">From $2,150</span>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1778303814569-3cb046f8c7c5?w=500&h=350&fit=crop" alt="Snow-capped mountain peaks reflected in a turquoise lake in Patagonia">
+          <div class="destination-body">
+            <h3>Patagonia, Chile</h3>
+            <p>Glacier hikes, granite spires, and some of the clearest night skies on Earth.</p>
+            <span class="price">From $2,890</span>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1761255240953-c571ba0b98d7?w=500&h=350&fit=crop" alt="Colorful spice stalls in a bustling Marrakech market">
+          <div class="destination-body">
+            <h3>Marrakech, Morocco</h3>
+            <p>Souks, spice markets, and rooftop dinners under the Atlas Mountains.</p>
+            <span class="price">From $1,780</span>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1706553912832-1bacc35c0a6c?w=500&h=350&fit=crop" alt="Traditional black houses with grass roofs on a hillside in the Faroe Islands">
+          <div class="destination-body">
+            <h3>Faroe Islands</h3>
+            <p>Dramatic cliffs, sea birds, and villages that feel like the edge of the map.</p>
+            <span class="price">From $2,410</span>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1686448921254-b326a7914d2f?w=500&h=350&fit=crop" alt="Colorful colonial buildings and papel picado flags lining a street in Oaxaca">
+          <div class="destination-body">
+            <h3>Oaxaca, Mexico</h3>
+            <p>Mezcal tastings, mole from scratch, and markets full of handwoven textiles.</p>
+            <span class="price">From $1,340</span>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1765114944961-80ca800fff35?w=500&h=350&fit=crop" alt="Aerial view of a lake surrounded by mountains near Queenstown, New Zealand">
+          <div class="destination-body">
+            <h3>Queenstown, NZ</h3>
+            <p>Adrenaline by day, lakeside wine bars by night, all set against the Remarkables.</p>
+            <span class="price">From $2,650</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="why-us" class="features">
+      <h2>Why Travel With Us</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Local Guides</h3>
+          <p>Every itinerary is reviewed by someone who has actually lived in the region.</p>
+        </div>
+        <div class="feature">
+          <h3>Flexible Booking</h3>
+          <p>Free date changes up to 30 days before departure on every package.</p>
+        </div>
+        <div class="feature">
+          <h3>No Hidden Fees</h3>
+          <p>The price you see includes lodging, transfers, and a daily activity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" class="cta">
+      <h2>Ready for Your Next Trip?</h2>
+      <p>Tell us where you want to go and we'll send a custom itinerary within 48 hours.</p>
+      <a href="#contact" class="button button-light">Get a Custom Itinerary</a>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2 class="footer-brand">Farflung</h2>
+        <p>hello@farflung.example &middot; +1 (555) 019-2244</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#destinations">Destinations</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#plan">Plan a Trip</a>
+      </nav>
+    </div>
+    <p class="copyright">&copy; 2026 Farflung Travel Co.</p>
+  </footer>
+</body>
+</html>

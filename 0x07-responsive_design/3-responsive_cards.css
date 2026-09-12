@@ -1,0 +1,94 @@
+/* ==========================================================================
+   3-responsive_cards.css
+   Mobile: single-column stack. Tablet (min-width 600px): two columns.
+   Desktop (min-width 1024px): three columns. Built with CSS Grid.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: #1f2a24;
+  background-color: #f6f7f5;
+  line-height: 1.5;
+}
+
+.page-header {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: #223b2d;
+  color: #eef4ef;
+}
+
+.page-header h1 {
+  margin: 0 0 0.4rem;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Base / mobile: single column ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #223b2d;
+}
+
+.card-body p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Tablet: two columns ---------- */
+
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* ---------- Desktop: three columns ---------- */
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}

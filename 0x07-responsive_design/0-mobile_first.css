@@ -1,0 +1,119 @@
+/* ==========================================================================
+   0-mobile_first.css
+   Base (mobile) styles first, then a single min-width media query
+   enhances the layout for larger screens.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: #2b2116;
+  background-color: #fdf8f2;
+  line-height: 1.5;
+}
+
+/* ---------- Base / mobile styles ---------- */
+
+.site-header {
+  background-color: #4a2c14;
+  color: #fdf8f2;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e6d3bd;
+}
+
+main {
+  padding: 1rem;
+}
+
+.intro h2 {
+  font-size: 1.25rem;
+}
+
+.intro p {
+  font-size: 0.95rem;
+}
+
+.feature-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e6d3bd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: #4a2c14;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4a2c14;
+  color: #e6d3bd;
+  font-size: 0.85rem;
+}
+
+/* ---------- Larger screens ---------- */
+
+@media (min-width: 768px) {
+  .site-header {
+    padding: 2.5rem 2rem;
+  }
+
+  .site-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.75rem;
+  }
+
+  .intro p {
+    font-size: 1.05rem;
+    max-width: 65ch;
+  }
+
+  .feature-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .feature-card {
+    flex: 1 1 calc(50% - 1.5rem);
+    padding: 1.5rem;
+  }
+}

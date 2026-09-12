@@ -1,0 +1,156 @@
+/* ==========================================================================
+   2-responsive_nav.css
+   Mobile: checkbox-driven hamburger toggle reveals a stacked menu.
+   Desktop (min-width: 768px): horizontal Flexbox navbar, toggle hidden.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: #1b1b1b;
+  line-height: 1.6;
+}
+
+/* ---------- Navbar shell ---------- */
+
+.navbar {
+  background-color: #10131a;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-inner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ---------- Hamburger toggle (mobile) ---------- */
+
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ---------- Mobile menu (hidden until toggled) ---------- */
+
+.nav-menu {
+  display: none;
+  width: 100%;
+  order: 3;
+}
+
+.nav-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-menu a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu li:first-child a {
+  border-top: none;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Page content ---------- */
+
+.page-section {
+  padding: 2rem 1rem;
+}
+
+.page-section.alt {
+  background-color: #f4f4f4;
+}
+
+.page-section h1,
+.page-section h2 {
+  margin-top: 0;
+}
+
+/* ---------- Larger screens: horizontal navbar ---------- */
+
+@media (min-width: 768px) {
+  .navbar-inner {
+    padding: 1rem 2rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .nav-menu a {
+    border-top: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+  }
+
+  .page-section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
