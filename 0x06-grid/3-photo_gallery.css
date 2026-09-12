@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #14161a;
+  color: #f4f6f8;
+}
+
+.page-header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-header p {
+  margin: 0.5rem 0 0;
+  color: #9aa5b1;
+}
+
+main {
+  padding: 0 2rem 2rem;
+}
+
+/* Responsive gallery grid: columns are created automatically and reflow
+   based on available width, no media queries required */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: 220px;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* The featured photo spans two columns and two rows */
+.gallery-item-featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #9aa5b1;
+  font-size: 0.9rem;
+}

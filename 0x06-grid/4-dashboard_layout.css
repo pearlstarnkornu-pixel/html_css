@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2933;
+}
+
+/* Overall dashboard structure built with named grid areas:
+   a full-height sidebar, a topbar, four stat cards, two content
+   panels, and a footer */
+.dashboard {
+  display: grid;
+  grid-template-columns: 220px repeat(4, 1fr);
+  grid-template-rows: 72px auto auto 56px;
+  grid-template-areas:
+    "sidebar topbar  topbar  topbar  topbar"
+    "sidebar stat1   stat2   stat3   stat4"
+    "sidebar chart   chart   activity activity"
+    "sidebar footer  footer  footer  footer";
+  min-height: 100vh;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.dashboard-sidebar {
+  grid-area: sidebar;
+  background-color: #1f2933;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+
+/* Flexbox used inside this single grid item to stack nav links */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-nav a {
+  color: #cbd2d9;
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.sidebar-nav a:hover {
+  background-color: #323f4b;
+  color: #ffffff;
+}
+
+.sidebar-nav a.active {
+  background-color: #3e64ff;
+  color: #ffffff;
+}
+
+.dashboard-topbar {
+  grid-area: topbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-topbar h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  color: #616e7c;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background-color: #3e64ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card:nth-of-type(1) { grid-area: stat1; }
+.stat-card:nth-of-type(2) { grid-area: stat2; }
+.stat-card:nth-of-type(3) { grid-area: stat3; }
+.stat-card:nth-of-type(4) { grid-area: stat4; }
+
+.stat-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #616e7c;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.stat-change {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stat-change.positive {
+  color: #2e8b57;
+}
+
+.stat-change.negative {
+  color: #de3618;
+}
+
+.panel {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.panel-chart {
+  grid-area: chart;
+}
+
+.panel-activity {
+  grid-area: activity;
+}
+
+.panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+/* Flexbox used inside this single grid item to lay out the bar chart */
+.chart-placeholder {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  height: 180px;
+}
+
+.chart-placeholder .bar {
+  flex: 1;
+  background: linear-gradient(to top, #3e64ff, #7f9cff);
+  border-radius: 4px 4px 0 0;
+}
+
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #323f4b;
+}
+
+.activity-list .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3e64ff;
+  flex-shrink: 0;
+}
+
+.dashboard-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #616e7c;
+  font-size: 0.85rem;
+}

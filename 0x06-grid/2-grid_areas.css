@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2933;
+}
+
+/* Page-level grid built with named areas: header spans the top,
+   sidebar sits beside the main content, footer spans the bottom */
+.page-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.area-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background-color: #1f2933;
+  color: #ffffff;
+}
+
+.area-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Flexbox used inside this single grid item to align the nav links */
+.header-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.header-nav a {
+  color: #cbd2d9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-nav a:hover {
+  color: #ffffff;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+  background-color: #e4e7eb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-left: 1rem;
+}
+
+.area-sidebar h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.area-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.area-sidebar li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #cbd2d9;
+}
+
+.area-main {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  line-height: 1.6;
+}
+
+.area-footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #1f2933;
+  color: #cbd2d9;
+  font-size: 0.9rem;
+}

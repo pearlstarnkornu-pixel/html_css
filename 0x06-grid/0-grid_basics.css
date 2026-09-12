@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2933;
+}
+
+.page-header {
+  padding: 2rem;
+  text-align: center;
+  background-color: #1f2933;
+  color: #ffffff;
+}
+
+.page-header p {
+  margin: 0.5rem 0 0;
+  color: #cbd2d9;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* The grid container: three columns, three explicit rows, gap between tracks */
+.grid-basics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 120px 120px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 720px;
+}
+
+.grid-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e64ff;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #616e7c;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout</title>
+  <link rel="stylesheet" href="4-dashboard_layout.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="dashboard-sidebar">
+      <div class="brand">PulseBoard</div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active">Overview</a>
+        <a href="#">Orders</a>
+        <a href="#">Customers</a>
+        <a href="#">Inventory</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <header class="dashboard-topbar">
+      <h1>Overview</h1>
+      <div class="topbar-actions">
+        <span class="user-name">Hi, Jordan</span>
+        <button class="btn">New Report</button>
+      </div>
+    </header>
+
+    <section class="stat-card">
+      <h2>Total Revenue</h2>
+      <p class="stat-value">$48,320</p>
+      <p class="stat-change positive">+12.4% this month</p>
+    </section>
+
+    <section class="stat-card">
+      <h2>Active Orders</h2>
+      <p class="stat-value">187</p>
+      <p class="stat-change positive">+8 today</p>
+    </section>
+
+    <section class="stat-card">
+      <h2>New Customers</h2>
+      <p class="stat-value">64</p>
+      <p class="stat-change negative">-3.1% this month</p>
+    </section>
+
+    <section class="stat-card">
+      <h2>Refund Rate</h2>
+      <p class="stat-value">1.8%</p>
+      <p class="stat-change positive">-0.4% this month</p>
+    </section>
+
+    <section class="panel panel-chart">
+      <h2>Sales Trend</h2>
+      <div class="chart-placeholder">
+        <div class="bar" style="height: 40%;"></div>
+        <div class="bar" style="height: 65%;"></div>
+        <div class="bar" style="height: 50%;"></div>
+        <div class="bar" style="height: 80%;"></div>
+        <div class="bar" style="height: 70%;"></div>
+        <div class="bar" style="height: 90%;"></div>
+        <div class="bar" style="height: 60%;"></div>
+      </div>
+    </section>
+
+    <section class="panel panel-activity">
+      <h2>Recent Activity</h2>
+      <ul class="activity-list">
+        <li><span class="dot"></span> Order #4821 shipped</li>
+        <li><span class="dot"></span> New customer signed up</li>
+        <li><span class="dot"></span> Invoice #2210 paid</li>
+        <li><span class="dot"></span> Refund issued for #4790</li>
+        <li><span class="dot"></span> Inventory restocked: Widget A</li>
+      </ul>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>&copy; 2026 PulseBoard Analytics</p>
+    </footer>
+  </div>
+</body>
+</html>

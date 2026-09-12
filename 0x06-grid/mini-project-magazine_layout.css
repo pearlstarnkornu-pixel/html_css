@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #f4f1ea;
+  color: #2b241c;
+}
+
+/* Overall magazine section: a single CSS Grid with named areas.
+   The featured story spans two columns, the sidebar spans two rows. */
+.magazine {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header    header    header"
+    "featured  featured  sidebar"
+    "secondary secondary sidebar"
+    "footer    footer    footer";
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.magazine-header {
+  grid-area: header;
+  text-align: center;
+  border-bottom: 3px solid #2b241c;
+  padding-bottom: 1.5rem;
+}
+
+.magazine-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: #8a7c68;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.magazine-title {
+  margin: 0.5rem 0;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.magazine-subtitle {
+  margin: 0;
+  font-style: italic;
+  color: #5c5346;
+}
+
+/* Featured article: spans two grid columns. Internally uses Flexbox
+   to stack the image and copy vertically. */
+.featured-article {
+  grid-area: featured;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featured-article img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.featured-content .tag {
+  display: inline-block;
+  background-color: #b5451b;
+  color: #ffffff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+}
+
+.featured-content h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.featured-content p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  color: #3d362c;
+}
+
+.read-more {
+  color: #b5451b;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar: spans two rows next to the featured and secondary areas */
+.sidebar-list {
+  grid-area: sidebar;
+  background-color: #ece6d8;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.sidebar-list h3 {
+  margin-top: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid #2b241c;
+  padding-bottom: 0.5rem;
+}
+
+/* Each mini-article uses Flexbox internally to place the thumbnail
+   beside its text */
+.mini-article {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #d8d0bd;
+}
+
+.mini-article:last-child {
+  border-bottom: none;
+}
+
+.mini-article img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.mini-article h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.mini-article p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #5c5346;
+  line-height: 1.4;
+}
+
+/* Secondary articles: a nested Grid of three equal columns */
+.secondary-articles {
+  grid-area: secondary;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.secondary-article img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+}
+
+.secondary-article h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.secondary-article p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5c5346;
+  line-height: 1.5;
+}
+
+.magazine-footer {
+  grid-area: footer;
+  text-align: center;
+  border-top: 3px solid #2b241c;
+  padding-top: 1.25rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #5c5346;
+}
