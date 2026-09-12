@@ -1,0 +1,159 @@
+/* 2-flex_items.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.page-header {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.page-header code {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.page-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.demo {
+  background-color: #fff;
+  border: 1px solid #e2e5e9;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.demo h2 {
+  margin-top: 0;
+}
+
+.demo code {
+  background-color: #eef1f4;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* --- Flex container base --- */
+
+.flex-container {
+  display: flex;
+  gap: 0.75rem;
+  background-color: #eef1f4;
+  border: 1px dashed #b7c0cc;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.flex-container.narrow {
+  max-width: 480px;
+}
+
+.flex-container.tall {
+  height: 140px;
+}
+
+.flex-container.centered {
+  align-items: center;
+}
+
+.box {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* --- flex-grow demos --- */
+
+.grow-1 {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.grow-2 {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+.grow-3 {
+  flex-grow: 3;
+  flex-basis: 0;
+}
+
+/* --- flex-basis demos --- */
+
+.basis-100 {
+  flex-basis: 100px;
+  flex-grow: 0;
+}
+
+.basis-200 {
+  flex-basis: 200px;
+  flex-grow: 0;
+}
+
+.basis-300 {
+  flex-basis: 300px;
+  flex-grow: 0;
+}
+
+/* --- flex-shrink demos --- */
+
+.shrink-item {
+  flex-basis: 220px;
+  flex-shrink: 1;
+}
+
+.no-shrink {
+  flex-basis: 220px;
+  flex-shrink: 0;
+  background-color: #dc2626;
+}
+
+/* --- flex shorthand demos --- */
+
+.shorthand-1 {
+  flex: 1;
+}
+
+.shorthand-2 {
+  flex: 2;
+  background-color: #059669;
+}
+
+/* --- align-self demo --- */
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

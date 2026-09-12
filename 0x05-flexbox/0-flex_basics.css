@@ -1,0 +1,109 @@
+/* 0-flex_basics.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.page-header {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.page-header code {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.page-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.demo {
+  background-color: #fff;
+  border: 1px solid #e2e5e9;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.demo h2 {
+  margin-top: 0;
+}
+
+.demo code {
+  background-color: #eef1f4;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* --- Flex container base --- */
+
+.flex-container {
+  display: flex;
+  gap: 0.75rem;
+  background-color: #eef1f4;
+  border: 1px dashed #b7c0cc;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.flex-item {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 1rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* --- Direction demos --- */
+
+.row-demo {
+  flex-direction: row;
+}
+
+.column-demo {
+  flex-direction: column;
+}
+
+/* --- Wrap demos --- */
+
+.nowrap-demo {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.wrap-demo {
+  flex-wrap: wrap;
+}
+
+.flex-item.wide {
+  flex: 0 0 160px;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

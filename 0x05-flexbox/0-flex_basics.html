@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Basics</title>
+  <link rel="stylesheet" href="0-flex_basics.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Flexbox Basics</h1>
+    <p>Exploring <code>display: flex</code>, <code>flex-direction</code>, and <code>flex-wrap</code>.</p>
+  </header>
+
+  <main class="page-main">
+
+    <section class="demo">
+      <h2>1. Default Flex Container (row)</h2>
+      <p>Setting <code>display: flex</code> on a container automatically lays its direct children out in a row, left to right.</p>
+      <div class="flex-container row-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>2. <code>flex-direction: row</code></h2>
+      <p>Items flow horizontally, following the writing direction.</p>
+      <div class="flex-container row-demo">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>3. <code>flex-direction: column</code></h2>
+      <p>Items flow vertically, top to bottom, stacking one under the other.</p>
+      <div class="flex-container column-demo">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>4. <code>flex-wrap: nowrap</code> (default)</h2>
+      <p>Without wrapping, items are forced onto a single line and shrink to fit — even if that squeezes them uncomfortably.</p>
+      <div class="flex-container nowrap-demo">
+        <div class="flex-item wide">Item 1</div>
+        <div class="flex-item wide">Item 2</div>
+        <div class="flex-item wide">Item 3</div>
+        <div class="flex-item wide">Item 4</div>
+        <div class="flex-item wide">Item 5</div>
+        <div class="flex-item wide">Item 6</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>5. <code>flex-wrap: wrap</code></h2>
+      <p>When items don't fit on one line, they wrap onto new lines instead of shrinking indefinitely.</p>
+      <div class="flex-container wrap-demo">
+        <div class="flex-item wide">Item 1</div>
+        <div class="flex-item wide">Item 2</div>
+        <div class="flex-item wide">Item 3</div>
+        <div class="flex-item wide">Item 4</div>
+        <div class="flex-item wide">Item 5</div>
+        <div class="flex-item wide">Item 6</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>0x05-flexbox &mdash; Exercise 0: Flexbox Basics</p>
+  </footer>
+</body>
+</html>

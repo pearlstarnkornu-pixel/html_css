@@ -1,0 +1,190 @@
+/* mini-project-pricing_section.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.pricing {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* --- Header: centered with Flexbox --- */
+
+.pricing__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.pricing__title {
+  margin: 0;
+  font-size: 2.25rem;
+  color: #111827;
+}
+
+.pricing__subtitle {
+  margin: 0;
+  max-width: 480px;
+  color: #6b7280;
+  font-size: 1.05rem;
+}
+
+/* --- Pricing card row --- */
+
+.pricing__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  max-width: 320px;
+  background-color: #fff;
+  border: 1px solid #e2e5e9;
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* Slightly emphasize the recommended middle plan */
+.plan--popular {
+  border: 2px solid #2563eb;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  z-index: 1;
+}
+
+.plan__badge {
+  align-self: center;
+  margin: 0 0 0.75rem;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.plan__name {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.plan__price {
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.plan__amount {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.plan__period {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.plan__description {
+  margin: 0 0 1.5rem;
+  color: #6b7280;
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.plan__features li {
+  color: #374151;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.plan__features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: 700;
+}
+
+.plan__cta {
+  align-self: stretch;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  background-color: #fff;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  margin-top: auto;
+}
+
+.plan__cta:hover {
+  background-color: #eff6ff;
+}
+
+.plan__cta--primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.plan__cta--primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- Footer row under the cards --- */
+
+.pricing__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  margin-top: 3rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.pricing__footer-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pricing__footer-link:hover {
+  text-decoration: underline;
+}

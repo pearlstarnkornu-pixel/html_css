@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Item Properties</title>
+  <link rel="stylesheet" href="2-flex_items.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Flex Item Properties</h1>
+    <p><code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>, and the <code>flex</code> shorthand.</p>
+  </header>
+
+  <main class="page-main">
+
+    <section class="demo">
+      <h2>1. <code>flex-grow</code></h2>
+      <p>All three items start from <code>flex-basis: 0</code> but grow at different rates: 1, 2, and 3 &mdash; item 3 ends up three times as wide as item 1.</p>
+      <div class="flex-container">
+        <div class="box grow-1">grow: 1</div>
+        <div class="box grow-2">grow: 2</div>
+        <div class="box grow-3">grow: 3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>2. <code>flex-basis</code></h2>
+      <p>Each item starts from a different base width before any growing/shrinking is applied.</p>
+      <div class="flex-container">
+        <div class="box basis-100">basis: 100px</div>
+        <div class="box basis-200">basis: 200px</div>
+        <div class="box basis-300">basis: 300px</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>3. <code>flex-shrink</code></h2>
+      <p>The container is too narrow for all three items at their natural width. Item 2 has <code>flex-shrink: 0</code>, so it refuses to shrink while the others do.</p>
+      <div class="flex-container narrow">
+        <div class="box shrink-item">Shrinks normally</div>
+        <div class="box no-shrink">flex-shrink: 0 (won't shrink)</div>
+        <div class="box shrink-item">Shrinks normally</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>4. <code>flex</code> shorthand</h2>
+      <p><code>flex: 1</code> means "grow and shrink equally, starting from zero width" &mdash; a common way to make items split space evenly. The middle item uses <code>flex: 2</code> to take twice the space.</p>
+      <div class="flex-container">
+        <div class="box shorthand-1">flex: 1</div>
+        <div class="box shorthand-2">flex: 2</div>
+        <div class="box shorthand-1">flex: 1</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>5. <code>align-self</code> on an individual item</h2>
+      <p>The container centers items by default, but the second item overrides its own cross-axis alignment.</p>
+      <div class="flex-container tall centered">
+        <div class="box">default</div>
+        <div class="box self-stretch">align-self: stretch</div>
+        <div class="box">default</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>0x05-flexbox &mdash; Exercise 2: Flex Item Properties</p>
+  </footer>
+</body>
+</html>

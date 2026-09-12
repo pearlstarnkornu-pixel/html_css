@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Media Object</title>
+  <link rel="stylesheet" href="5-media_object.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Testimonials</h1>
+    <p>The classic "media object" pattern: fixed-size media beside flexible content.</p>
+  </header>
+
+  <main class="page-main">
+
+    <article class="media">
+      <div class="media__avatar" aria-hidden="true">DW</div>
+      <div class="media__body">
+        <p class="media__quote">
+          "Switching our layout system over to Flexbox cut our CSS in half.
+          Things that used to take a dozen hacky rules now take three lines."
+        </p>
+        <p class="media__author">Dana Whitfield &mdash; Frontend Lead, Arcline</p>
+      </div>
+    </article>
+
+    <article class="media">
+      <div class="media__avatar media__avatar--alt" aria-hidden="true">MT</div>
+      <div class="media__body">
+        <p class="media__quote">
+          "The media object pattern is everywhere once you notice it: comments,
+          notifications, product listings. Flexbox makes it trivial."
+        </p>
+        <p class="media__author">Miguel Torres &mdash; Product Designer, Bright Path</p>
+      </div>
+    </article>
+
+    <article class="media">
+      <div class="media__avatar media__avatar--alt2" aria-hidden="true">PN</div>
+      <div class="media__body">
+        <p class="media__quote">
+          "No matter how long the comment text gets, the avatar never moves
+          or resizes. That predictability is exactly what I want in a UI."
+        </p>
+        <p class="media__author">Priya Nair &mdash; Engineering Manager, Fieldstone</p>
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

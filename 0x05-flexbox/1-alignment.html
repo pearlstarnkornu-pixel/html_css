@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Alignment</title>
+  <link rel="stylesheet" href="1-alignment.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Flexbox Alignment</h1>
+    <p><code>justify-content</code> controls the main axis, <code>align-items</code>/<code>align-self</code> control the cross axis.</p>
+  </header>
+
+  <main class="page-main">
+
+    <section class="demo">
+      <h2>justify-content: flex-start</h2>
+      <div class="flex-container justify-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>justify-content: center</h2>
+      <div class="flex-container justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>justify-content: space-between</h2>
+      <div class="flex-container justify-between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>justify-content: space-around</h2>
+      <div class="flex-container justify-around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>align-items: flex-start</h2>
+      <p>Container has extra height so the cross-axis effect is visible.</p>
+      <div class="flex-container tall align-items-start">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>align-items: center</h2>
+      <div class="flex-container tall align-items-center">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>align-items: stretch (default)</h2>
+      <div class="flex-container tall align-items-stretch">
+        <div class="box no-height">A</div>
+        <div class="box no-height">B</div>
+        <div class="box no-height">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>align-self on an individual item</h2>
+      <p>The whole container uses <code>align-items: flex-start</code>, but the middle item overrides it with <code>align-self: flex-end</code>.</p>
+      <div class="flex-container tall align-items-start">
+        <div class="box">A</div>
+        <div class="box self-end">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>Perfect centering (horizontal + vertical)</h2>
+      <p>Combining <code>justify-content: center</code> and <code>align-items: center</code> centers content on both axes at once.</p>
+      <div class="flex-container centered-box">
+        <div class="box centered-content">Centered!</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>0x05-flexbox &mdash; Exercise 1: Alignment</p>
+  </footer>
+</body>
+</html>

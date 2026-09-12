@@ -1,0 +1,86 @@
+/* 3-navbar.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #111827;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+
+.navbar__brand {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar__links a:hover,
+.navbar__links a:focus-visible {
+  color: #ffffff;
+  border-bottom-color: #60a5fa;
+}
+
+.navbar__cta {
+  background-color: #2563eb;
+  color: #fff !important;
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+  border-bottom: none !important;
+}
+
+.navbar__cta:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- Page content --- */
+
+.page-main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.page-main code {
+  background-color: #eef1f4;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
