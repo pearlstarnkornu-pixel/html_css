@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google apis  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>SimpleSite - Learn HTML & CSS</title>
+</head>
+<body>
+    <!-- This is a simple website created to learn HTML and CSS. -->
+
+
+    <!--=============== Navigation ===============-->
+    <nav id="navigation">
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-code"></i> SimpleSite</h1>
+            <ul class="nav-links">
+                <li class="homelink"><a href="#"><i class="fa fa-house"></i> Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a>
+
+                    <div class="dropdown-content">
+                        <a href="#">HTML Basics</a>
+                        <a href="#">CSS Basics</a>
+                        <a href="#">Responsive Design</a>
+                        <a href="#">JavaScript Fundamentals</a>
+                        <a href="#">Deployment and Hosting</a>
+                    </div>
+                </li>
+                
+                <li><a href="#topics"><i class="fa fa-list"></i> Topics</a></li>
+                <li><a href="#stats"><i class="fa-solid fa-folder-open"></i> Resources</a></li>
+                <li><a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div id="menu-toggle">
+                <i class="fas fa-bars" id="menu-toggle"></i> 
+                <div class="mobile-nav-links" id="mobile-nav-links">
+                    <li class="homelink"><a href="#"><i class="fa fa-house"></i> Home</a></li>
+                    <li><a href="#courses"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+                    <li><a href="#topics"><i class="fa fa-list"></i> Topics</a></li>
+                    <li><a href="#stats"><i class="fa-solid fa-folder-open"></i> Resources</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </div>
+            </div>  
+        </div>
+    </nav>
+    
+
+    <!--================ Hero =================-->
+    <section id="hero">
+        <img class="hero-image" src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&fit=crop" alt="Hero Image">
+        <div class="container">
+            <h2>Master <span class="highlight">HTML & CSS</span> <br> From Zero to Hero</h2>
+            <p>Welcome to SimpleSite! Your one-stop solution for learning HTML and CSS. No complexity, just learning...</p>
+            
+            <div class="">
+                <a href="#courses" class="btn get-started"><i class="fas fa-rocket"></i> Get Started</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-comment-dots"></i> Contact Us</a>
+            </div>
+            
+        </div>  
+    </section>
+
+    <!--================ courses =================-->
+    <section id="courses">
+        <div class="container">
+            <h3 class="section-title"><i class="fas fa-graduation-cap"></i> What you will learn</h3>
+            <div class="section-title-underline"></div>
+            
+            <div class="courses-space">   <!-- this is where the course cards will be displayed --> 
+                
+                <div class="course-card"> <!-- this is a single course card that displays information about a specific course -->
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="HTML code">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-badge"><i class="fas fa-user-graduate"></i>Beginner</span>
+                        <h4><i class="fab fa-html5"></i>HTML Basics</h4>
+                        <p class="">
+                            Learn the fundamentals of HTML, the 
+                            building block of the web. Create your 
+                            first web page and understand the structure of HTML 
+                            documents.
+                        </p>
+                        <a class="card-link" href="example.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>  
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/14553730/pexels-photo-14553730.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-badge"><i class="fas fa-palette"></i>Styling</span>
+                        <h4><i class="fab fa-css3-alt"></i> CSS Basics</h4>
+                        <p>Discover how to style your web pages with CSS. 
+                            Learn about selectors, properties, and how to 
+                            create visually appealing designs.
+                        </p>
+                        <a class="card-link" href="example.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Course Image">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-badge"><i class="fas fa-mobile-alt"></i>Responsive</span>
+                        <h4><i class="fas fa-tablet-alt"></i> Responsive Design</h4>
+                        <p>Learn how to create websites that look great 
+                            on all devices, from desktops to mobile phones. 
+                            Understand the principles of responsive design.
+                        </p>
+                        <a class="card-link" href="example.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--================ Topics =================-->
+    <section id="topics">
+        <div class="container">
+            <h3 class="section-title"><i class="fa fa-book-open"></i> Topics Covered</h3>
+            <div class="section-title-underline"></div>
+
+            <div class="topic-space">
+                <div class="topic">
+                    <i class="fas fa-code"></i>
+                    <h4>HTML Fundamentals</h4>
+                    <p>Learn about different HTML elements and their uses, including headings, paragraphs, links, images, and more.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>CSS Basics to Advanced</h4>
+                    <p>Master the art of styling your web pages with CSS. From basic selectors to advanced techniques, learn everything you need to create stunning designs.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>Flexbox</h4>
+                    <p>Learn how to use Flexbox to create flexible and responsive layouts for your web pages.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Responsive Design</h4>
+                    <p>Learn how to create websites that look great on all devices, from desktops to mobile phones. Understand the principles of responsive design and implement them in your projects.</p>
+                </div>
+                <div class="topic">
+                    <i class="fas fa-mobile"></i>
+                    <h4>Mobile first Design</h4>
+                    <p>Learn the mobile-first approach to web design, where you start by designing for mobile devices and then scale up for larger screens.</p>
+                </div>
+                <div class="topic">
+                    <i class="fa-solid fa-terminal"></i>
+                    <h4>JavaScript Fundamentals</h4>
+                    <p>Get started with JavaScript and learn the basics of programming. Understand variables, functions, and how to make your web pages interactive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ stats =================-->
+    <section id="stats">
+        <div class="container">
+            <h3 class="section-title"><i class="fa-solid fa-chart-line"></i> Why learn with us?</h3>
+            <div class="section-title-underline"></div>
+            
+            <div class="stats-space">
+                <div class="stat">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h4>1000+</h4>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h4>50+</h4>
+                    <p>Expert Instructors</p>
+                </div>
+                <div class="stat">
+                    <i class="fa-solid fa-gem"></i>
+                    <h4>100%</h4>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div class="stat">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>24/7</h4>
+                    <p>Community Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================= FAQ =================-->
+    <section id="faq">
+        <div class="container">
+            <h3 class="section-title"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h3>
+            <div class="section-title-underline"></div>
+            
+            <div class="faq-space">
+                <div class="faq-item">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h4>What is SimpleSite?</h4>
+                    <p>SimpleSite is an online platform designed to help beginners learn HTML and CSS in a simple and effective way. We provide comprehensive courses, tutorials, and resources to guide you through your web development journey.</p>
+                </div>
+                <div class="faq-item">
+                    <i class="fa-solid fa-grin-squint"></i>
+                    <h4>How do I get started?</h4>
+                    <p>Getting started with SimpleSite is easy! Simply sign up for an account, choose a course that interests you, and begin learning at your own pace.</p>
+                </div>
+                <div class="faq-item">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h4>What are the prerequisites for the courses?</h4>
+                    <p>There are no prerequisites for our courses. We start from the basics and gradually build up your skills.</p>
+                </div>
+                <div class="faq-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <h4>How long does it take to complete a course?</h4>
+                    <p>The duration of each course varies depending on the complexity and the amount of time you dedicate to it. On average, most courses can be completed within a few weeks.</p>
+                </div>
+                <div class="faq-item"> 
+                    <i class="fa-solid fa-award"></i>
+                    <h4>Do you offer certificates upon completion?</h4>
+                    <p>Yes, we provide certificates of completion for all our courses. These certificates can be shared on your LinkedIn profile or added to your resume.</p>
+                </div>
+                <div class="faq-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <h4>Is there a community for learners?</h4>
+                    <p>Yes, we have a vibrant community of learners and instructors. You can join our forums, participate in discussions, and get support from fellow students and experts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================= NewsLetter ==========-->
+    <div id="newsletter">
+        <div class="container">
+            <div class="newsletter">
+                <h4><i class="fas fa-envelope-open-text"></i> Get Weekly Web Tips</h4>
+                <p>Subscribe to our free newsletter — learn HTML/CSS tricks, JavaScript tips, and beginner guides weekly!</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+                <p class="newsletter-notice"><i class="fas fa-shield-alt"></i> Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--================ Contact form =================-->
+    <div id="contact">
+        <div class="container">
+            <h3 class="section-title"><i class="fas fa-comments"></i> Send Us a Message</h3>
+            <div class="section-title-underline"></div>
+
+            <div class="form-section">
+                <form action="submit_form.php" method="post">
+                    
+                    <div class="form-group">
+                    <!-- <label for="name">Name:</label> -->
+                        <input type="text" name="name" placeholder="Your Name Eg. John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                    <!-- <label for="email">Email:</label> -->
+                        <input type="email" name="email" placeholder="Your Email Eg. john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                    <!-- <label for="message">Message:</label> -->
+                        <textarea name="message" placeholder="Your Message Eg. What is your question?" required></textarea>
+                    </div>
+
+                    
+                    <button type="submit" class="btn submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <p class="form-notice"><i class="fas fa-shield-alt"></i> We respect your privacy. Your information will not be shared.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--================ Footer =================-->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                |<!-- <a href="#"><i class="fas fa-lock"></i> Privacy Policy</a> -->
+                <!-- <a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a> -->
+                <a href="#"><i class="fas fa-phone"></i> Contact</a>
+                |
+                <a href="#"><i class="fab fa-github"></i> GitHub</a> 
+                <!-- working hours     -->
+                |
+                <a href="#"><i class="fas fa-clock"></i> Working Hours: Mon-Fri 9am-5pm</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="footer-notice">&copy; 2026 Heidekel Software Academy. All rights reserved.</p>
+            <p class="footer-notice">Built from scratch for absolute beginners — no frameworks, just vanilla code</p>
+        </div>
+    </footer>
+
+    <!--================= End of SimpleSite =================-->
+    <a href="#" class="back-to-top"> &uarr; </a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
