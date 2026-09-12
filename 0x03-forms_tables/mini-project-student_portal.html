@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Registration &amp; Class Schedule</title>
+</head>
+<body>
+    <header>
+        <h1>Heidekel Software Academy - Student Portal</h1>
+        <p>Register for the upcoming term and review the published class schedule below.</p>
+    </header>
+
+    <nav>
+        <p>Jump to a section:
+            <a href="#registration">Registration</a> |
+            <a href="#schedule">Class Schedule</a> |
+            <a href="#grades">Current Grades</a>
+        </p>
+    </nav>
+
+    <main>
+        <section id="registration">
+            <h2>Student Registration</h2>
+            <p>New and returning students can use this form to register for the Fall 2026 term.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Student Details</legend>
+
+                    <div>
+                        <label for="student-fullname">Full Name</label><br>
+                        <input type="text" id="student-fullname" name="fullname" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div>
+                        <label for="student-email">Email Address</label><br>
+                        <input type="email" id="student-email" name="email" placeholder="jane.doe@example.com" required>
+                    </div>
+
+                    <div>
+                        <label for="student-dob">Date of Birth</label><br>
+                        <input type="date" id="student-dob" name="dob" required>
+                    </div>
+
+                    <div>
+                        <label for="student-id-number">Student ID Number</label><br>
+                        <input
+                            type="text"
+                            id="student-id-number"
+                            name="student-id"
+                            placeholder="e.g. HSA-2026-0142"
+                            pattern="HSA-\d{4}-\d{4}"
+                            title="Format: HSA-YYYY-NNNN"
+                            required
+                        >
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Program Choice</legend>
+
+                    <div>
+                        <label for="student-program">Program</label><br>
+                        <select id="student-program" name="program" required>
+                            <option value="">-- Select a program --</option>
+                            <option value="frontend">Front-End Web Development</option>
+                            <option value="backend">Back-End Web Development</option>
+                            <option value="fullstack">Full-Stack Web Development</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="student-notes">Notes for Advisor (optional)</label><br>
+                        <textarea id="student-notes" name="notes" rows="4" cols="40" placeholder="Anything your advisor should know before term starts?"></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="checkbox" id="student-terms" name="terms" required>
+                    <label for="student-terms">I confirm the information above is accurate and I agree to the enrollment policy</label>
+                </div>
+
+                <div>
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="schedule">
+            <h2>Class Schedule</h2>
+            <p>Below is the weekly schedule for the Front-End Web Development track.</p>
+
+            <table>
+                <caption>Front-End Web Development - Weekly Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td>9:00 AM - 11:00 AM</td>
+                        <td>HTML &amp; CSS Fundamentals</td>
+                        <td>Mr. Owusu</td>
+                        <td>Lab 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td>1:00 PM - 3:00 PM</td>
+                        <td>Responsive Design</td>
+                        <td>Ms. Adjei</td>
+                        <td>Lab 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td>9:00 AM - 11:00 AM</td>
+                        <td>JavaScript Essentials</td>
+                        <td>Mr. Boateng</td>
+                        <td>Lab 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thursday</th>
+                        <td>1:00 PM - 3:00 PM</td>
+                        <td>Accessibility &amp; Semantics</td>
+                        <td>Ms. Adjei</td>
+                        <td>Lab 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Friday</th>
+                        <td>10:00 AM - 12:00 PM</td>
+                        <td>Project Studio</td>
+                        <td>Mr. Owusu</td>
+                        <td>Lab 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="grades">
+            <h2>Current Grades</h2>
+            <p>A snapshot of grades from the previous term, provided for reference while registering for new courses.</p>
+
+            <table>
+                <caption>Summer 2026 Term - Final Grades</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">Credits</th>
+                        <th scope="col">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Introduction to Web Development</th>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTML &amp; CSS Fundamentals</th>
+                        <td>3</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Basic Programming Logic</th>
+                        <td>4</td>
+                        <td>B+</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total Credits</th>
+                        <td>10</td>
+                        <td>-</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Heidekel Software Academy Student Portal - for practice purposes only.</p>
+    </footer>
+</body>
+</html>

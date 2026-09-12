@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Controls Showcase</title>
+</head>
+<body>
+    <header>
+        <h1>Form Controls Showcase</h1>
+        <p>This page demonstrates a wide variety of HTML form controls, each paired with a properly associated label.</p>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Text-Based Inputs</legend>
+
+                <div>
+                    <label for="fc-fullname">Full Name (text)</label><br>
+                    <input type="text" id="fc-fullname" name="fullname" placeholder="John Smith">
+                </div>
+
+                <div>
+                    <label for="fc-email">Email Address (email)</label><br>
+                    <input type="email" id="fc-email" name="email" placeholder="john.smith@example.com">
+                </div>
+
+                <div>
+                    <label for="fc-password">Password (password)</label><br>
+                    <input type="password" id="fc-password" name="password" minlength="8">
+                </div>
+
+                <div>
+                    <label for="fc-age">Age (number)</label><br>
+                    <input type="number" id="fc-age" name="age" min="13" max="120" step="1">
+                </div>
+
+                <div>
+                    <label for="fc-start-date">Preferred Start Date (date)</label><br>
+                    <input type="date" id="fc-start-date" name="start-date">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Selection Controls</legend>
+
+                <div>
+                    <label for="fc-country">Country (select)</label><br>
+                    <select id="fc-country" name="country">
+                        <option value="">-- Choose a country --</option>
+                        <option value="gh">Ghana</option>
+                        <option value="ng">Nigeria</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="fc-bio">Short Bio (textarea)</label><br>
+                    <textarea id="fc-bio" name="bio" rows="5" cols="40" placeholder="Tell us a little about yourself..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Checkboxes</legend>
+                <p>Which topics are you interested in? (choose any that apply)</p>
+
+                <div>
+                    <input type="checkbox" id="fc-interest-html" name="interests" value="html">
+                    <label for="fc-interest-html">HTML</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="fc-interest-css" name="interests" value="css">
+                    <label for="fc-interest-css">CSS</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="fc-interest-js" name="interests" value="javascript">
+                    <label for="fc-interest-js">JavaScript</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Radio Buttons</legend>
+                <p>What is your current experience level?</p>
+
+                <div>
+                    <input type="radio" id="fc-level-beginner" name="level" value="beginner" checked>
+                    <label for="fc-level-beginner">Beginner</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="fc-level-intermediate" name="level" value="intermediate">
+                    <label for="fc-level-intermediate">Intermediate</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="fc-level-advanced" name="level" value="advanced">
+                    <label for="fc-level-advanced">Advanced</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>All controls above are for demonstration only; the form does not submit to a live server.</p>
+    </footer>
+</body>
+</html>

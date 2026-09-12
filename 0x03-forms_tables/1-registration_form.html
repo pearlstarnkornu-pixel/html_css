@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <header>
+        <h1>Create Your Account</h1>
+        <p>Sign up to access the student portal, track your progress, and join the class discussion boards.</p>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <div>
+                    <label for="reg-username">Username</label><br>
+                    <input
+                        type="text"
+                        id="reg-username"
+                        name="username"
+                        placeholder="janedoe"
+                        minlength="4"
+                        maxlength="20"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="reg-email">Email Address</label><br>
+                    <input
+                        type="email"
+                        id="reg-email"
+                        name="email"
+                        placeholder="jane.doe@example.com"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="reg-password">Password</label><br>
+                    <input
+                        type="password"
+                        id="reg-password"
+                        name="password"
+                        minlength="8"
+                        pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                        title="At least 8 characters, including at least one letter and one number"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="reg-confirm-password">Confirm Password</label><br>
+                    <input
+                        type="password"
+                        id="reg-confirm-password"
+                        name="confirm-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div>
+                    <label for="reg-dob">Date of Birth</label><br>
+                    <input type="date" id="reg-dob" name="dob" required>
+                </div>
+            </fieldset>
+
+            <div>
+                <input type="checkbox" id="reg-terms" name="terms" required>
+                <label for="reg-terms">I agree to the Terms of Service and Privacy Policy</label>
+            </div>
+
+            <div>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Already have an account? Contact your instructor for a sign-in link.</p>
+    </footer>
+</body>
+</html>

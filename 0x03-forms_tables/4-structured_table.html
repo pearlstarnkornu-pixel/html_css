@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Table - Order Summary</title>
+</head>
+<body>
+    <header>
+        <h1>Order Summary</h1>
+        <p>An itemized receipt showing the courses purchased in a single order, including quantity, unit price, and line total.</p>
+    </header>
+
+    <main>
+        <table>
+            <caption>Order #10457 - Placed on August 28, 2026</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Line Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">HTML &amp; CSS Fundamentals</th>
+                    <td>1</td>
+                    <td>$39.00</td>
+                    <td>$39.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">JavaScript Essentials</th>
+                    <td>1</td>
+                    <td>$49.00</td>
+                    <td>$49.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Responsive Design Workshop</th>
+                    <td>2</td>
+                    <td>$25.00</td>
+                    <td>$50.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Accessibility Basics eBook</th>
+                    <td>1</td>
+                    <td>$12.00</td>
+                    <td>$12.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Subtotal</th>
+                    <td>$150.00</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="3">Tax (5%)</th>
+                    <td>$7.50</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="3">Total</th>
+                    <td>$157.50</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <footer>
+        <p>This is a sample receipt for practice purposes; no real purchase was made.</p>
+    </footer>
+</body>
+</html>
